@@ -4,9 +4,9 @@ import pandas as pd
 import numpy as np
 import scipy as sp
 
-df = pd.read_csv('/home/bimanjaya/learner/TA/brainflow/EEG-projects/data_logger/2022-07-05.csv')
+df = pd.read_csv('/home/bimanjaya/learner/TA/brainflow/EEG-projects/data_logger/2022-07-06.csv')
 
-channel1 = df['Channel1']
+channel1 = df['Channel2']
 
 eeg_fft = sp.fftpack.fft(channel1)
 
