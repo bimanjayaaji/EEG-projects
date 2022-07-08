@@ -6,7 +6,7 @@ from brainflow.board_shim import BoardShim, BrainFlowInputParams, BoardIds
 from brainflow.data_filter import DataFilter, FilterTypes, DetrendOperations
 from pyqtgraph.Qt import QtGui, QtCore
 
-
+# hehe
 class Graph:
     def __init__(self, board_shim):
         self.board_id = board_shim.get_board_id()
