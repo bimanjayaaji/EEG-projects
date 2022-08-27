@@ -1,6 +1,8 @@
 from brainflow.board_shim import BoardShim, BrainFlowInputParams, BoardIds
 import datetime
 import time
+import csv
+import pandas as pd
 
 # def date_now():
 #     today = datetime.datetime.now().strftime("%Y-%m-%d")
@@ -20,7 +22,7 @@ def main ():
     board.prepare_session()
 
     board.start_stream () # use this for default options
-    time.sleep(10)
+    time.sleep(300)
     # data = board.get_current_board_data (256) # get latest 256 packages or less, doesnt remove them from internal buffer
     # print(board.get_board_data) # ADDED
     data = board.get_board_data() # get all data and remove it from internal buffer
@@ -30,6 +32,8 @@ def main ():
     # print(data)
     # print(type(data))
     # print(data.shape)
+
+    pd.DataFrame(data).transpose().to_csv("/home/bimanjaya/nr-anjay-test.csv")
 
 
 if __name__ == "__main__":

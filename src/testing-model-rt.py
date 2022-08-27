@@ -13,7 +13,7 @@ from sklearn.metrics import classification_report
 from sklearn.svm import SVC
 
 def main():
-    loaded = load('/home/bimanjaya/learner/TA/brainflow/EEG-projects/src/model1.joblib') 
+    loaded = load('/home/bimanjaya/learner/TA/brainflow/EEG-projects/src/model4.joblib') 
     delay = 5
 
     BoardShim.enable_board_logger()
@@ -122,7 +122,7 @@ def main():
             # df2 = pd.DataFrame(dict1)
             # df = pd.concat([df,df2],ignore_index=True)
 
-        print(loaded.predict_proba([dataset]))
+        print(loaded.predict([dataset]), loaded.predict_proba([dataset]))
 
 
 if __name__ == "__main__":
